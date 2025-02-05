@@ -1,0 +1,40 @@
+body {
+    font-family: "Arial", "Helvetica", "Montserrat", sans-serif;
+    background-color: #FDE2E4;
+    color: #333333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    font-family: "Lora", "Georgia", "Garamond", serif;
+    color: #FF6F91;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+h3 {
+    font-family: "Lora", "Georgia", "Garamond", serif;
+    text-align: center;
+    background-color: #FF6F91;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.5;
+    text-indent: 20px;
+}
