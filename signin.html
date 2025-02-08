@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetWise</title>
+    <link rel="stylesheet" href="fc-style.css">
+    <link rel="icon" type="image/png" href="fc-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script defer src="fc-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="bg-img">
+            <img src="img/bg-img.png">
+        </div>
+        <div class="login">
+            <div class="logo">
+                <img src="img/logo.png" height="100px" width="100px">
+            </div>
+            
+            <h1>Welcome!</h1>
+            <h4>Sign in to continue</h4>
+
+            <label for="username">Username <span class="required">*</span></label>
+            <input type="text" id="username" name="username" placeholder="Email or Phone Number" required>
+            <p class="error" id="username-error"></p>
+            
+            <label for="password">Password <span class="required">*</span></label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <p class="error" id="password-error"></p>
+
+            <a href="forgot-password.html" class="forgot-pw">Forgot Password?</a>
+            <button type="submit" class="login-btn" onclick="validateLogin()">Sign In</button>
+            <p class="signup-text">New user? <a href="signup.html">Sign Up</a></p>
+        </div>
+    </div>
+</body>
+</html>
