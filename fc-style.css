@@ -84,10 +84,32 @@ input {
     margin: 10px 0; 
     background: white;
     outline: none;
+    padding-right: 40px;
 }
 
 input::placeholder {
     color: #aaa;
+}
+
+.password-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.password-wrapper input {
+    flex: 1;
+    padding-right: 60px;
+}
+
+.password-wrapper button {
+    position: absolute;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #043555;
+    font-weight: bold;
 }
 
 .forgot-pw {
