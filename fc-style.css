@@ -13,7 +13,7 @@ body, html {
 
 .container {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; /* Ensure the layout stays side-by-side */
     width: 100%;
     min-height: 100%;
 }
@@ -21,7 +21,7 @@ body, html {
 .bg-img {
     width: 50%;
     height: 100vh;
-    position: fixed;
+    position: fixed; /* Keep it in place while scrolling */
     top: 0;
     left: 0;
     overflow: hidden;
@@ -36,7 +36,7 @@ body, html {
 .login {
     flex: 1;
     width: 50%;
-    margin-left: 50%;
+    margin-left: 50%; /* Push it next to the fixed image */
     display: flex;
     flex-direction: column;
     padding: 40px;
