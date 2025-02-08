@@ -8,20 +8,19 @@
 body, html {
     width: 100vw;
     height: 100vh;
-    overflow: auto;
+    overflow: hidden; /* Prevents horizontal scroll */
 }
 
 .container {
     display: flex;
-    flex-wrap: nowrap; /* Ensure the layout stays side-by-side */
     width: 100%;
-    min-height: 100%;
+    height: 100vh;
 }
 
 .bg-img {
     width: 50%;
     height: 100vh;
-    position: fixed; /* Keep it in place while scrolling */
+    position: fixed; /* Keeps it in place while scrolling */
     top: 0;
     left: 0;
     overflow: hidden;
@@ -34,14 +33,15 @@ body, html {
 }
 
 .login {
-    flex: 1;
     width: 50%;
-    margin-left: 50%; /* Push it next to the fixed image */
+    margin-left: 50%; /* Moves the login section to the right */
     display: flex;
     flex-direction: column;
     padding: 40px;
     background: linear-gradient(to bottom, #f8f9fc, #e3e6f0);
     box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Allows scrolling in the login section */
+    height: 100vh; /* Ensures it takes full height */
 }
 
 .login img {
