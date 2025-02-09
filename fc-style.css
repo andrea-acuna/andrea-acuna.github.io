@@ -168,3 +168,46 @@ input::placeholder {
 input.invalid {
     border: 2px solid #C10F0F;
 }
+
+@media (max-width: 1024px) {
+    .bg-img {
+        width: 40%;
+    }
+    .login {
+        width: 60%;
+        margin-left: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .bg-img {
+        width: 100%;
+        height: 40vh;
+        position: relative;
+    }
+    .login {
+        width: 100%;
+        margin-left: 0;
+        height: auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+    .login img {
+        width: 60px;
+        height: 60px;
+    }
+    .login {
+        padding: 15px;
+    }
+    .login-btn {
+        font-size: 14px;
+    }
+}
