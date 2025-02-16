@@ -1,0 +1,27 @@
+body {
+    font-family: "Tahoma", "Helvetica", "Arial", sans-serif;
+    background-color: #D6C0B3;
+    color: #333333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    font-family: "Georgia", "Garamond", "Lora", serif;
+    color: #FFFFFF;
+    background-color: #AB886D;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+}
