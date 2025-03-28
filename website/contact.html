@@ -201,23 +201,6 @@
                 behavior: 'smooth'
             });
         });
-        
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            // Here you would normally add AJAX to send the form data
-            // For demo purposes, just show the success message
-            document.getElementById('formSuccess').style.display = 'block';
-            
-            // Reset form
-            this.reset();
-            
-            // Hide success message after 5 seconds
-            setTimeout(function() {
-                document.getElementById('formSuccess').style.display = 'none';
-            }, 5000);
-        });
     </script>
 </body>
 </html>
