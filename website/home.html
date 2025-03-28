@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrea Acuña | Home</title>
+    <link rel="stylesheet" href="website-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+    <!-- Header with Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="home.html" class="logo">Andrea Acuña</a>
+                
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="navbar-links" id="navbarLinks">
+                    <div class="nav-item">
+                        <a href="home.html" class="active"><i class="fas fa-house"></i> Home</a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#"><i class="fas fa-user"></i> About <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <div class="dropdown-content">
+                            <a href="biography.html"><i class="fas fa-book-open"></i> Biography</a>
+                            <a href="skills.html"><i class="fas fa-star"></i> Skills</a>
+                            <a href="resume.html"><i class="fas fa-file-alt"></i> Resume</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#"><i class="fas fa-photo-film"></i> Media <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <div class="dropdown-content">
+                            <a href="gallery.html"><i class="fas fa-images"></i> Photo Gallery</a>
+                            <a href="beats.html"><i class="fas fa-music"></i> Beats</a>
+                            <a href="films.html"><i class="fas fa-film"></i> Films</a>
+                            <a href="tvshows.html"><i class="fas fa-tv"></i> TV Shows</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#"><i class="fas fa-plus"></i> More <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <div class="dropdown-content">
+                            <a href="dreamplaces.html"><i class="fas fa-map-marked-alt"></i> Dream Places</a>
+                            <a href="bucketlist.html"><i class="fas fa-list-alt"></i> Bucket List</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-title" id="page-title">
+        <div class="container animate__animated animate__fadeIn">
+            <h1>Hello, I'm Andrea!</h1>
+            <p>Welcome to my personal website, a space where I share my journey, passions, aspirations, and more. Please take a moment to watch my introduction video below.</p>
+        </div>
+    </section>
+        
+    <section class="content">
+        <div class="container">
+
+            <!-- Welcome Video -->
+            <div class="content-card">
+                <div class="video-container">
+                    <video controls>
+                        <source src="welcome-vid.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to top button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Andrea Acuña. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileToggle').addEventListener('click', function() {
+            document.getElementById('navbarLinks').classList.toggle('active');
+            this.innerHTML = document.getElementById('navbarLinks').classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            const scrollToTop = document.getElementById('scrollToTop');
+            
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            if (window.scrollY > 300) {
+                scrollToTop.classList.add('visible');
+            } else {
+                scrollToTop.classList.remove('visible');
+            }
+        });
+        
+        document.getElementById('scrollToTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
