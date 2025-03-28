@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrea Acuña | Films</title>
+    <link rel="stylesheet" href="website-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+    <!-- Header with Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="home.html" class="logo">Andrea Acuña</a>
+                
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="navbar-links" id="navbarLinks">
+                    <div class="nav-item">
+                        <a href="home.html"><i class="fas fa-house"></i> Home</a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#"><i class="fas fa-user"></i> About <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <div class="dropdown-content">
+                            <a href="biography.html"><i class="fas fa-book-open"></i> Biography</a>
+                            <a href="skills.html"><i class="fas fa-star"></i> Skills</a>
+                            <a href="resume.html"><i class="fas fa-file-alt"></i> Resume</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="active"><i class="fas fa-photo-film"></i> Media <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <div class="dropdown-content">
+                            <a href="gallery.html"><i class="fas fa-images"></i> Photo Gallery</a>
+                            <a href="beats.html"><i class="fas fa-music"></i> Beats</a>
+                            <a href="films.html" class="active"><i class="fas fa-film"></i> Films</a>
+                            <a href="tvshows.html"><i class="fas fa-tv"></i> TV Shows</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#"><i class="fas fa-plus"></i> More <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <div class="dropdown-content">
+                            <a href="dreamplaces.html"><i class="fas fa-map-marked-alt"></i> Dream Places</a>
+                            <a href="bucketlist.html"><i class="fas fa-list-alt"></i> Bucket List</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-title" id="page-title">
+        <div class="container animate__animated animate__fadeIn">
+            <h1>My Kind of Films</h1>
+            <p>This page showcases my favorite films. Each category includes embedded video clips, offering a glimpse into the most thrilling moments, iconic scenes, and masterful storytelling that make these films unforgettable.</p>
+            <div class="section-links animate__animated animate__fadeIn animate__delay-1s">
+                <a href="#romcom" title="Explore my favorite romantic comedies">Romcom</a>
+                <a href="#filipino" title="Check out my favorite Filipino films">Filipino</a>
+                <a href="#animated" title="Discover the best animated movies I've watched">Animated</a>
+                <a href="#others" title="See other films I enjoy">Others</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content">
+        <div class="container">
+            <div class="category animate__animated animate__fadeIn animate__delay-1s">
+                <h2 class="category-title" id="romcom">Romcom</h2>
+                
+                <div class="film-items">
+                    <div class="film-item">
+                        <h3>Notting Hill</h3>
+                        <p><strong>Director:</strong> Roger Michell</p>
+                        <p><strong>Year:</strong> 1999</p>
+                        <p>A chance encounter brings together reserved bookstore owner William Thacker and Hollywood icon Anna Scott, who forge an improbable romance.</p>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/4RI0QvaGoiI?si=wj-QIHF1Ftrba4rw" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="film-item">
+                        <h3>10 Things I Hate About You</h3>
+                        <p><strong>Director:</strong> Gil Junger</p>
+                        <p><strong>Year:</strong> 1999</p>
+                        <p>A high-school boy, Cameron, cannot date Bianca until her anti-social older sister, Kat, has a boyfriend. So, Cameron pays a mysterious boy, Patrick, to charm Kat.</p>
+                        <div class="video-container">
+                            <iframe src="https://youtube.com/embed/yEmcEuS6xm4?si=eqBNlIqo-_BKZp9M" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="film-item">
+                        <h3>How to Lose a Guy in 10 Days</h3>
+                        <p><strong>Director:</strong> Donald Petrie</p>
+                        <p><strong>Year:</strong> 2003</p>
+                        <p>Ben bets his coworkers that he can make a woman fall in love with him in just 10 days. But along comes Andie, a writer with her own agenda.</p>
+                        <div class="video-container">
+                            <iframe src="https://youtube.com/embed/2ZMGk_Ml1fc?si=wCjAT9_BdETaj6gE" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                  
+                    <div class="film-item">
+                        <h3>13 Going On 30</h3>
+                        <p><strong>Director:</strong> Gary Winick</p>
+                        <p><strong>Year:</strong> 2004</p>
+                        <p>Jenna Rink wishes she could just grow up after being humiliated at her 13th birthday party — only to wake up as a 30-year-old fashion magazine editor.</p>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/_pmFp2W65Fs?si=4qfi6m8xmT_LyuBi" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="film-item">
+                        <h3>The Proposal</h3>
+                        <p><strong>Director:</strong> Anne Fletcher</p>
+                        <p><strong>Years:</strong> 2009</p>
+                        <p>Margaret, a Canadian-born, successful book editor in New York faces deportation, she convinces her assistant Andrew to marry her in return for a promotion.</p>
+                        <div class="video-container">
+                            <iframe src="https://youtube.com/embed/c1ROrNQITRw?si=k7iqR7-oCujTtQfW" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                  
+                    <div class="film-item">
+                        <h3>About Time</h3>
+                        <p><strong>Creator:</strong> Richard Curtis</p>
+                        <p><strong>Years:</strong> 2013</p>
+                        <p>When Tim learns that the men in his family can travel in time and change their own lives, he decides to go back and win the woman of his dreams.</p>
+                        <div class="video-container">
+                            <iframe src="https://youtube.com/embed/7OIFdWk83no?si=IZbHnnDZJkqKoMk4" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filipino -->
+            <div class="category animate__animated animate__fadeIn animate__delay-2s">
+                <h2 class="category-title" id="filipino">Filipino</h2>
+                
+                <div class="film-items">
+                    <div class="film-item">
+                        <h3>Got 2 Believe</h3>
+                        <p><strong>Director:</strong> Olivia Lamasan</p>
+                        <p><strong>Year:</strong> 2002</p>
+                        <p>A cynical wedding photographer strikes a deal with a hopeless romantic wedding coordinator. As she searches for Mr. Right, they unexpectedly fall for each other.</p>
+                        <div class="video-container">
+                            <iframe src="https://youtube.com/embed/D0BQI6XuVIk?si=vnvXQ9XreFl8SlXI" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="film-item">
+                        <h3>A Very Special Love</h3>
+                        <p><strong>Director:</strong> Cathy Garcia-Sampana</p>
+                        <p><strong>Year:</strong> 2008</p>
+                        <p>Editorial assistant Laida Magtalas finds herself working for the man of her dreams, Miguel Montenegro, but remains blind to some hard facts.</p>
+                        <div class="video-container">
+                            <iframe src="https://youtube.com/embed/kJDFdNzk9-c?si=IpPz3IGUBMsEcUSE" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="film-item">
+                        <h3>Seven Sundays</h3>
+                        <p><strong>Director:</strong> Cathy Garcia-Sampana</p>
+                        <p><strong>Year:</strong> 2017</p>
+                        <p>A father diagnosed with cancer asks his busy and grown children to spend their Sundays with him, forcing his family to confront their issues before it's too late.</p>
+                        <div class="video-container">
+                            <iframe src="https://youtube.com/embed/BMUhYuKN4eo?si=b6h4j6aB6nAdMvD_" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="film-item">
+                        <h3>Hello, Love, Goodbye</h3>
+                        <p><strong>Director:</strong> Cathy Garcia-Sampana</p>
+                        <p><strong>Year:</strong> 2019</p>
+                        <p>Two overseas Filipino workers living in Hong Kong intertwine and find themselves falling in love, but they each have different plans for their future.</p>
+                        <div class="video-container">
+                            <iframe src="https://youtube.com/embed/s7UyA4w6a7A?si=ISQwxabOaPwRTm-C" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="film-item">
+                        <h3>Isa Pa with Feelings</h3>
+                        <p><strong>Director:</strong> Prime Cruz</p>
+                        <p><strong>Year:</strong> 2019</p>
+                        <p>When an aspiring architect learns sign language from her deaf neighbor, they find solace in each other but face challenges as their relationship grows.</p>
+                        <div class="video-container">
+                            <iframe src="https://youtube.com/embed/66fBNmD0t00?si=rkus1J-bMudNPamR" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="film-item">
+                        <h3>Rewind</h3>
+                        <p><strong>Director:</strong> Mae Cruz-Alviar</p>
+                        <p><strong>Year:</strong> 2023</p>
+                        <p>When his wife dies while their marriage is in tatters, a man makes a strange deal sending him to the past to turn it around — in exchange for his life.</p>
+                        <div class="video-container">
+                            <iframe src="https://youtube.com/embed/_31Tod1VvLM?si=lN0gRgHSeOfTFU9Z" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category animate__animated animate__fadeIn animate__delay-2s">
+                <h2 class="category-title" id="animated">Animated</h2>
+                
+                <div class="film-items">
+                    <div class="film-item">
+                        <h3>Spirited Away</h3>
+                        <p><strong>Director:</strong> Hayao Miyazaki</p>
+                        <p><strong>Year:</strong> 2001</p>
+                        <p>A young girl and her parents stumble into a magical world of spirits and gods, where she must work at a bathhouse to save her parents and return to the human world.</p>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/ByXuk9QqQkk?si=mcseHmYM68l3zTBL" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="film-item">
+                        <h3>Monsters, Inc.</h3>
+                        <p><strong>Director:</strong> Pete Docter</p>
+                        <p><strong>Year:</strong> 2001</p>
+                        <p>In a world where monsters generate power by scaring children, two monsters discover that laughter is actually more powerful than screams.</p>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/CGbgaHoapFM?si=mLNV9y_lv1psJz0S" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="film-item">
+                        <h3>Up</h3>
+                        <p><strong>Director:</strong> Pete Docter</p>
+                        <p><strong>Year:</strong> 2009</p>
+                        <p>Carl Fredricksen, a widower, embarks on a journey to the South American wilderness to reach Paradise Falls, a place his late wife Ellie dreamed of visiting.</p>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/HWEW_qTLSEE?si=DKPW2lhwdbHbzk2W" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="film-item">
+                        <h3>Tangled</h3>
+                        <p><strong>Director:</strong> Nathan Greno, Byron Howard</p>
+                        <p><strong>Year:</strong> 2010</p>
+                        <p>A reimagining of the Rapunzel fairy tale, following a lost princess with magical long hair who yearns to leave her tower and explore the world.</p>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/2f516ZLyC6U?si=HONaOlWkoBv9HpcD" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="film-item">
+                        <h3>Toy Story 3</h3>
+                        <p><strong>Director:</strong> Lee Unkrich</p>
+                        <p><strong>Year:</strong> 2010</p>
+                        <p>Andy, now a teenager, is about to head off to college, Woody, Buzz, and the rest of the toys find themselves accidentally donated to a daycare center.</p>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/2BlMNH1QTeE?si=fWUZG8VwRPrw8qa6" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="film-item">
+                        <h3>Frozen</h3>
+                        <p><strong>Director:</strong> Chris Buck, Jennifer Lee</p>
+                        <p><strong>Year:</strong> 2013</p>
+                        <p>Anna embarks on a journey with Kristoff, Sven, and Olaf, to find her sister Elsa, whose icy powers have trapped their kingdom in eternal winter.</p>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/TbQm5doF_Uc?si=SHT9Cm_Gq7ZmxUV-" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Others Category -->
+            <div class="category animate__animated animate__fadeIn animate__delay-2s">
+                <h2 class="category-title" id="others">Others</h2>
+                
+                <div class="film-items">
+                    <div class="film-item">
+                        <h3>The Princess Diaries</h3>
+                        <p><strong>Director:</strong> Garry Marshall</p>
+                        <p><strong>Year:</strong> 2001</p>
+                        <p>A heartwarming coming-of-age story about a shy teenager who discovers she is the heir to a European throne, navigating royalty, self-confidence, and family.</p>
+                        <div class="video-container">
+                            <iframe src="https://youtube.com/embed/CzcGwB7qat8?si=KuV3dZYNIqQ17IQP" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="film-item">
+                        <h3>A Moment to Remember</h3>
+                        <p><strong>Director:</strong> John H. Lee</p>
+                        <p><strong>Year:</strong> 2004</p>
+                        <p>Su-jin and Chul-soo's marriage is put to test when Su-jin is diagnosed with a rare form of Alzheimer's disease, causing her to gradually lose her memories.</p>
+                        <div class="video-container">
+                            <iframe src="https://youtube.com/embed/vb0leKGvyaE?si=3sSZDN-I-TEcXBCN" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="film-item">
+                        <h3>The Notebook</h3>
+                        <p><strong>Director:</strong> Nick Cassavetes</p>
+                        <p><strong>Year:</strong> 2004</p>
+                        <p>Two young lovers, Allie and Noah, are torn apart by war and class differences in the 1940s in this adaptation of Nicholas Sparks's bestselling novel.</p>
+                        <div class="video-container">
+                            <iframe src="https://youtube.com/embed/BjJcYdEOI0k?si=8UJAXjhJzpMI-yQ6" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="film-item">
+                        <h3>Pride & Prejudice</h3>
+                        <p><strong>Director:</strong> Joe Wright</p>
+                        <p><strong>Year:</strong> 2005</p>
+                        <p>Headstrong Elizabeth Bennet meets the aloof and arrogant Mr. Darcy, they must overcome their first impressions to find love in Regency-era England.</p>
+                        <div class="video-container">
+                            <iframe src="https://youtube.com/embed/1dYv5u6v55Y?si=ofan8WC2fSGeSMI4" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                  
+                    <div class="film-item">
+                        <h3>High School Musical 3</h3>
+                        <p><strong>Director:</strong> Kenny Ortega</p>
+                        <p><strong>Year:</strong> 2008</p>
+                        <p>With graduation approaching, East High seniors, along with the rest of the Wildcats, stage a spring musical to create a lasting memory of their time together.</p>
+                        <div class="video-container">
+                            <iframe src="https://youtube.com/embed/bEQXcbqvbT0?si=qZ2N-KRbiDVXjYNR" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="film-item">
+                        <h3>Miracle in Cell No. 7</h3>
+                        <p><strong>Director:</strong> Lee Hwan-kyung</p>
+                        <p><strong>Year:</strong> 2013</p>
+                        <p>A mentally-ill father is falsely accused of a crime and sent to prison, where he forms a bond with his fellow inmates, who in return help him see his daughter again.</p>
+                        <div class="video-container">
+                            <iframe src="https://youtube.com/embed/h9MGZFy-gog?si=8QZ1hdQC1KJwzZf1" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to top button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Andrea Acuña. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileToggle').addEventListener('click', function() {
+            document.getElementById('navbarLinks').classList.toggle('active');
+            this.innerHTML = document.getElementById('navbarLinks').classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            const scrollToTop = document.getElementById('scrollToTop');
+            
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            if (window.scrollY > 300) {
+                scrollToTop.classList.add('visible');
+            } else {
+                scrollToTop.classList.remove('visible');
+            }
+        });
+        
+        document.getElementById('scrollToTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
