@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrea Acuña | Dream Places</title>
+    <link rel="stylesheet" href="website-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+    <!-- Header with Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="home.html" class="logo">Andrea Acuña</a>
+                
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="navbar-links" id="navbarLinks">
+                    <div class="nav-item">
+                        <a href="home.html"><i class="fas fa-house"></i> Home</a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#"><i class="fas fa-user"></i> About <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <div class="dropdown-content">
+                            <a href="biography.html"><i class="fas fa-book-open"></i> Biography</a>
+                            <a href="skills.html"><i class="fas fa-star"></i> Skills</a>
+                            <a href="resume.html"><i class="fas fa-file-alt"></i> Resume</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#"><i class="fas fa-photo-film"></i> Media <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <div class="dropdown-content">
+                            <a href="gallery.html"><i class="fas fa-images"></i> Photo Gallery</a>
+                            <a href="beats.html"><i class="fas fa-music"></i> Beats</a>
+                            <a href="films.html"><i class="fas fa-film"></i> Films</a>
+                            <a href="tvshows.html"><i class="fas fa-tv"></i> TV Shows</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="active"><i class="fas fa-plus"></i> More <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <div class="dropdown-content">
+                            <a href="dreamplaces.html" class="active"><i class="fas fa-map-marked-alt"></i> Dream Places</a>
+                            <a href="bucketlist.html"><i class="fas fa-list-alt"></i> Bucket List</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-title" id="page-title">
+        <div class="container animate__animated animate__fadeIn">
+            <h1>Dream Places to Visit</h1>
+            <p>Travel has always been my greatest inspiration. Hover over and click the destinations in my collage below to explore my dream places, from breathtaking landscapes to iconic landmarks that capture my imagination.</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="content-card animate__animated animate__fadeIn animate__delay-1s">
+                <div class="collage-container">
+                    <img src="places-collage.jpg" alt="Travel Destinations Collage" class="responsive-collage" usemap="#collage-map" id="collageImage">
+                    
+                    <!-- Place Labels -->
+                    <div id="japan-label" class="place-label">Japan</div>
+                    <div id="italy-label" class="place-label">Italy</div>
+                    <div id="south-korea-label" class="place-label">South Korea</div>
+                    <div id="uk-label" class="place-label">United Kingdom</div>
+                    <div id="switzerland-label" class="place-label">Switzerland</div>
+
+                    <map name="collage-map">
+                        <!-- Japan -->
+                        <area shape="circle" coords="1123,692,654" href="japan.html" alt="Japan" target="_blank" onmouseover="document.getElementById('japan-label').style.opacity='1'" onmouseout="document.getElementById('japan-label').style.opacity='0'">
+                        
+                        <!-- Italy -->
+                        <area shape="poly" coords="2789,379,2808,344,2797,286,2814,243,2814,172,2803,161,2824,108,2868,59,2957,4,3005,2,3038,25,3065,111,3069,119,3097,196,3116,258,3156,255,3190,284,3227,289,3227,269,3258,270,3259,290,3284,290,3284,258,3534,291,3620,338,3634,407,3632,553,3517,563,3213,567,3086,568,2796,552,2799,406" href="italy.html" target="_blank" alt="Italy" onmouseover="document.getElementById('italy-label').style.opacity='1'" onmouseout="document.getElementById('italy-label').style.opacity='0'">
+                        
+                        <!-- South Korea -->
+                        <area shape="rect" coords="2317,664,3830,1391" href="south-korea.html" alt="South Korea" target="_blank" onmouseover="document.getElementById('south-korea-label').style.opacity='1'" onmouseout="document.getElementById('south-korea-label').style.opacity='0'">
+                        
+                        <!-- United Kingdom -->
+                        <area shape="rect" coords="17,1420,1710,2159" href="united-kingdom.html" alt="United Kingdom" target="_blank" onmouseover="document.getElementById('uk-label').style.opacity='1'" onmouseout="document.getElementById('uk-label').style.opacity='0'">
+                        
+                        <!-- Switzerland -->
+                        <area shape="rect" coords="1742,1410,3835,2154" href="switzerland.html" alt="Switzerland" target="_blank" onmouseover="document.getElementById('switzerland-label').style.opacity='1'" onmouseout="document.getElementById('switzerland-label').style.opacity='0'">
+                    </map>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to top button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Andrea Acuña. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navbarLinks = document.getElementById('navbarLinks');
+        const placeLabel = document.getElementById('placeLabel');
+        
+        mobileToggle.addEventListener('click', function() {
+            navbarLinks.classList.toggle('active');
+            if (navbarLinks.classList.contains('active')) {
+                mobileToggle.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            const scrollToTop = document.getElementById('scrollToTop');
+            
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            if (window.scrollY > 300) {
+                scrollToTop.classList.add('visible');
+            } else {
+                scrollToTop.classList.remove('visible');
+            }
+        });
+        
+        document.getElementById('scrollToTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Responsive Map
+        $(document).ready(function(){
+            $('map').imageMapResize();
+        });
+    </script>
+</body>
+</html>
