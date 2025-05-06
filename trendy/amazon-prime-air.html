@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Prime Air: Drone Delivery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+        /* Variables */
+        :root {
+            --primary: #49225B;
+            --secondary: #2A93D5;
+            --light-blue: #37CAEC;
+            --teal: #3DD9D6;
+            --light-teal: #ADD9D8;
+            --dark: #333;
+            --gray: #888;
+            --light: #f0f7f7;
+            --white: #fff;
+            --heading-font: 'Montserrat', sans-serif;
+            --body-font: 'Poppins', sans-serif;
+            --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--body-font);
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--heading-font);
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            color: #444;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Navigation */
+        .top-nav { 
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px); 
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%; 
+            z-index: 1000; 
+            box-shadow: var(--shadow-sm);
+            padding: 15px 0; 
+
+        } 
+    
+    .top-nav .container { 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+    } 
+    
+    .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.nav-brand .logo {
+    height: 40px;
+    width: auto;
+    border-radius: 50%;
+    box-shadow: none;
+}
+
+.nav-brand:hover .logo {
+    transform: none;
+    box-shadow: none;
+}
+
+    
+    .nav-links { 
+        display: flex; 
+        align-items: center; 
+        gap: 1.5rem; 
+    } 
+    
+    .nav-link { 
+        color: var(--dark);
+        font-weight: 600;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+        padding: 0.75rem 0;
+        transition: var(--transition);
+
+    } 
+    
+    .nav-link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.nav-link i {
+    font-size: 1.1rem;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu > a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--dark);
+    font-weight: 600;
+    padding: 0.75rem 0;
+    position: relative;
+}
+
+.dropdown-menu > a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.dropdown-menu:hover > a:after {
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--white);
+    min-width: 240px;
+    border-radius: var(--radius);
+    padding: 1rem 0;
+    z-index: 1001;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: var(--transition);
+}
+
+.dropdown-menu:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-content a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0.8rem 1.5rem;
+    font-weight: 500;
+    color: var(--dark);
+    transition: var(--transition);
+}
+
+.dropdown-content a:hover {
+    background-color: var(--light);
+    color: var(--primary);
+    padding-left: 1.8rem;
+}
+
+.dropdown-content a i {
+    font-size: 1rem;
+    color: var(--secondary);
+    width: 20px;
+    text-align: center;
+}
+
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(to right, #2A93D5, #37CAEC);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 74px; /* Added to account for fixed header */
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%233DD9D6" fill-opacity="0.1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.6;
+        }
+
+        #hero h2 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        #hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: white;
+            position: relative;
+        }
+
+        /* Product Sections */
+        .product-section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .product-section:not(.alt-bg) {
+            background-color: white;
+        }
+
+        .product-section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .product-section h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #2A93D5, #3DD9D6);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .text-content, .image-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .text-content {
+            padding: 1rem;
+        }
+
+        .text-content strong {
+            color: #2A93D5;
+        }
+
+        .caption {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .alt-bg {
+            background-color: #f0f7f7;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .alt-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(173, 217, 216, 0.4) 0%, rgba(173, 217, 216, 0) 70%);
+            z-index: 0;
+        }
+
+        /* Video Section */
+        .video-container {
+            margin-top: 4rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .video-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .placeholder-video {
+            background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+            border-radius: 12px;
+            padding: 5rem 2rem;
+            text-align: center;
+            color: #49225B;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .placeholder-video:hover {
+            transform: scale(1.02);
+        }
+
+        .placeholder-video i {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: #2A93D5;
+            transition: transform 0.3s ease;
+        }
+
+        .placeholder-video:hover i {
+            transform: scale(1.1);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            margin-top: 4rem;
+            position: relative;
+        }
+
+        .testimonials h3 {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-size: 1.8rem;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .testimonial {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            font-size: 4rem;
+            color: rgba(42, 147, 213, 0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .testimonial p {
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial .author {
+            text-align: right;
+            font-weight: 600;
+            color: #2A93D5;
+            margin-top: 1rem;
+            font-size: 1.05rem;
+        }
+
+        /* Footer */
+footer {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 80px 0 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    margin-bottom: 50px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-brand .footer-logo {
+    height: auto;
+    width: auto;
+    box-shadow: none;
+}
+
+.footer-brand .footer-logo:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.footer-brand span {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+.footer-description {
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.footer-social a:hover {
+    background: var(--secondary);
+    transform: translateY(-3px);
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.link-group h4 {
+    color: var(--white);
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.link-group h4 i {
+    color: var(--secondary);
+}
+
+.link-group ul li {
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+.link-group ul li:hover {
+    transform: translateX(5px);
+}
+
+.link-group a {
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+.link-group a:hover {
+    color: var(--secondary);
+}
+
+.link-group a i {
+    width: 20px;
+    text-align: center;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.copyright {
+    color: var(--gray);
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.legal-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.legal-links a {
+    color: var(--gray);
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.legal-links a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #2A93D5, #37CAEC);
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(42, 147, 213, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s ease;
+        }
+
+        .btn:hover {
+            background: linear-gradient(to right, #37CAEC, #3DD9D6);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(42, 147, 213, 0.4);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        /* Accent Elements */
+        .accent-text {
+            color: #2A93D5;
+            font-weight: 600;
+        }
+
+        /* Video iframe styling */
+        .video-wrapper iframe {
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            aspect-ratio: 16/9;
+            width: 100%;
+            height: auto;
+            min-height: 450px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .content-wrapper {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .product-section:nth-child(even) .content-wrapper {
+                flex-direction: column-reverse;
+            }
+            
+            #hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .product-section h2 {
+                font-size: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header from first file -->
+    <nav class="top-nav">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="home.html"><img src="logo.png" alt="Trendy Logo" class="logo"></a>
+                <span>TRENDY INFO</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <div class="dropdown-menu">
+                    <a href="#categories"><i class="fas fa-th-large"></i> Categories <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="communication.html"><i class="fas fa-comments"></i> Communication</a>
+                        <a href="security.html"><i class="fas fa-shield-alt"></i> Security</a>
+                        <a href="health.html"><i class="fas fa-heartbeat"></i> Health</a>
+                        <a href="entertainment.html"><i class="fas fa-film"></i> Entertainment</a>
+                        <a href="transportation.html"><i class="fas fa-car"></i> Transportation</a>
+                        <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+                    </div>
+                </div>
+                <a href="aboutus.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a>
+                <a href="#feedback" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Amazon's 'Prime Air': Drone Delivery</h2>
+            <p>The future of delivery has arrived</p>
+        </div>
+    </section>
+
+    <main>
+        <section id="what" class="product-section">
+            <div class="container">
+                <h2>What is Prime Air?</h2>
+                <div class="content-wrapper">
+                    <div class="text-content">
+                        <p>Prime Air is Amazon's revolutionary drone delivery service, designed to enhance delivery speed and efficiency. This autonomous flying system aims to deliver packages to customers in 30 minutes or less.</p>
+                        <p>Key features include:</p>
+                        <ul>
+                            <li><strong>Rapid Delivery:</strong> Packages delivered in 30 minutes or less</li>
+                            <li><strong>Autonomous Flight:</strong> Capable of navigating and delivering without human pilots</li>
+                            <li><strong>Safety Systems:</strong> Advanced obstacle detection and avoidance capabilities</li>
+                            <li><strong>Environmental Benefits:</strong> Electric drones reducing carbon footprint of deliveries</li>
+                        </ul>
+                    </div>
+                    <div class="image-content">
+                        <img src="amazon-mk30.webp" alt="Amazon Prime Air Drone">
+                        <p class="caption">Amazon's Prime Air delivery drone - The standard delivery configuration</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how" class="product-section alt-bg">
+            <div class="container">
+                <h2>How Does It Work?</h2>
+                <div class="content-wrapper">
+                    <div class="image-content">
+                        <img src="amazon-prime-air-process.png" alt="How Prime Air Drone Works">
+                        <p class="caption">How Prime Air drone operates</p>
+                    </div>
+                    <div class="text-content">
+                        <p>Amazon Prime Air operates through a sophisticated autonomous system that enables it to:</p>
+                        <ol>
+                            <li><strong>Process and Package:</strong> Customer orders are processed at Amazon fulfillment centers and prepared for drone delivery.</li>
+                            <li><strong>Navigate Autonomously:</strong> Using advanced sensors, GPS, and computer vision, the drone navigates to the delivery location safely.</li>
+                            <li><strong>Deliver and Return:</strong> It descends to a safe height, releases the package at the designated delivery location, and returns to the fulfillment center.</li>
+                        </ol>
+                        <p>The technology behind Prime Air combines robotics, artificial intelligence, and aerospace engineering to create a revolutionary delivery system that can transform how customers receive their packages.</p>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <h3>See It In Action</h3>
+                    <div class="video-wrapper">
+                        <iframe width="100%" height="450" src="https://www.youtube.com/embed/3HJtmx5f1Fc" title="Amazon Prime Air Drone Delivery" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="when" class="product-section">
+            <div class="container">
+                <h2>When Was It Introduced?</h2>
+                <div class="content-wrapper">
+                    <div class="text-content">
+                        <p>Amazon Prime Air was first announced in 2013, marking the beginning of a new era in delivery services. However, the journey from concept to implementation has taken several years.</p>
+                        <p>The development timeline included:</p>
+                        <ul>
+                            <li><strong>2013:</strong> Initial concept announcement by Jeff Bezos on 60 Minutes</li>
+                            <li><strong>2016:</strong> First public demonstration of Prime Air delivery in the UK</li>
+                            <li><strong>2019:</strong> Unveiling of new drone design at re:MARS conference</li>
+                            <li><strong>2020:</strong> FAA approval for commercial operations in the US</li>
+                            <li><strong>2022:</strong> Launch of commercial service in select markets</li>
+                        </ul>
+                        <p>This innovation represents Amazon's commitment to incorporating cutting-edge technology into its delivery infrastructure and positions the company as a pioneer in drone delivery services worldwide.</p>
+                    </div>
+                    <div class="image-content">
+                        <img src="prime-air-2019-unveil.webp" alt="Prime Air Unveil">
+                        <p class="caption">Amazon revealed a new drone at its Re:Mars conference in 2019</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="where" class="product-section alt-bg">
+            <div class="container">
+                <h2>Where Is It Already Implemented?</h2>
+                <div class="content-wrapper">
+                    <div class="image-content">
+                        <img src="prime-air-college-station.avif" alt="Prime Air in use">
+                        <p class="caption">Amazon Prime Air took flight in College Station in December 2022</p>
+                    </div>
+                    <div class="text-content">
+                        <p>Amazon Prime Air has been implemented in select locations as part of its phased rollout strategy:</p>
+                        <ul>
+                            <li><strong>College Station, Texas:</strong> One of the first US locations with operational service</li>
+                            <li><strong>Lockeford, California:</strong> Early implementation site in the United States</li>
+                            <li><strong>Select UK locations:</strong> Early testing and implementation in the United Kingdom</li>
+                        </ul>
+                        <p>The implementation of Prime Air has shown promising results in reducing delivery times and enhancing customer satisfaction. Amazon continues to work with regulatory agencies worldwide to expand this service to more locations, representing a significant step forward in the future of delivery logistics.</p>
+                    </div>
+                </div>
+                <div class="testimonials">
+                    <h3>Expert Opinions</h3>
+                    <div class="testimonial-grid">
+                        <div class="testimonial">
+                            <p>"Prime Air represents a significant advancement in how we approach delivery logistics in the digital age. It combines the best of autonomous technology with practical applications that benefit customers."</p>
+                            <p class="author">- Amazon Technology Division</p>
+                        </div>
+                        <div class="testimonial">
+                            <p>"This innovation positions Amazon as a leader in autonomous delivery solutions globally, demonstrating how robotics and AI can effectively transform the e-commerce delivery experience."</p>
+                            <p class="author">- Technology Analyst, Wall Street Journal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="trendy.png" alt="Trendy Logo" class="footer-logo">
+                    <span>TRENDY INFO</span>
+                    <p class="footer-description">Exploring the future through industry innovation.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4><i class="fas fa-industry"></i> Industries</h4>
+                        <ul>
+                            <li><a href="health.html"><i class="fas fa-heartbeat"></i> Health Tech</a></li>
+                            <li><a href="security.html"><i class="fas fa-shield-alt"></i> Cybersecurity</a></li>
+                            <li><a href="transportation.html"><i class="fas fa-car"></i> Transportation</a></li>
+                            <li><a href="communication.html"><i class="fas fa-comments"></i> Communication</a></li>
+                            <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                            <li><a href="entertainment.html"><i class="fas fa-film"></i> Entertainment</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="link-group">
+                        <h4><i class="fas fa-book"></i> Resources</h4>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-file-alt"></i> Reports</a></li>
+                            <li><a href="#"><i class="fas fa-chart-line"></i> Market Data</a></li>
+                            <li><a href="#"><i class="fas fa-blog"></i> Blog</a></li>
+                            <li><a href="#"><i class="fas fa-newspaper"></i> News</a></li>
+                            <li><a href="#"><i class="fas fa-book-open"></i> Guides</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="link-group">
+                        <h4><i class="fas fa-building"></i> Company</h4>
+                        <ul>
+                            <li><a href="about.html"><i class="fas fa-users"></i> About</a></li>
+                            <li><a href="#"><i class="fas fa-briefcase"></i> Careers</a></li>
+                            <li><a href="#"><i class="fas fa-handshake"></i> Partners</a></li>
+                            <li><a href="#feedback"><i class="fas fa-envelope"></i> Contact</a></li>
+                            <li><a href="#"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2025 Trendy Info. All rights reserved.
+                </div>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>    
+</body>
+</html>
