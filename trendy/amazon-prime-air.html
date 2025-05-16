@@ -13,37 +13,61 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <nav class="top-nav">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="home.html"><img src="logo.png" alt="Trendy Logo" class="logo"></a>
-                <span>TRENDY INFO</span>
-            </div>
-            <div class="nav-links">
-                <a href="#" class="nav-link"><i class="fas fa-home"></i> Home</a>
-                <div class="dropdown-menu">
-                    <a href="#categories"><i class="fas fa-th-large"></i> Categories <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="communication.html"><i class="fas fa-comments"></i> Communication</a>
-                        <a href="security.html"><i class="fas fa-shield-alt"></i> Security</a>
-                        <a href="health.html"><i class="fas fa-heartbeat"></i> Health</a>
-                        <a href="entertainment.html"><i class="fas fa-film"></i> Entertainment</a>
-                        <a href="transportation.html"><i class="fas fa-car"></i> Transportation</a>
-                        <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+    <nav class="top-nav"> 
+        <div class="container"> 
+            <div class="nav-brand"> 
+                <a href="home.html"><img src="logo.png" alt="Trendy Logo" class="logo"></a> 
+                <span>TRENDY</span> 
+            </div> 
+            <div class="nav-links"> 
+                <a href="aboutus.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a> 
+                <div class="dropdown-menu"> 
+                    <a href="#categories"><i class="fas fa-th-large"></i> Categories <i class="fas fa-chevron-down"></i></a> 
+                    <div class="dropdown-content"> 
+                        <a href="communication.html"><i class="fas fa-comments"></i> Communication</a> 
+                        <a href="security.html"><i class="fas fa-shield-alt"></i> Security</a> 
+                        <a href="health.html"><i class="fas fa-heartbeat"></i> Health</a> 
+                        <a href="entertainment.html"><i class="fas fa-film"></i> Entertainment</a> 
+                        <a href="transportation.html"><i class="fas fa-car"></i> Transportation</a> 
+                        <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a> 
                     </div>
-                </div>
-                <a href="aboutus.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a>
+                </div> 
                 <a href="#feedback" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
-            </div>
-        </div>
+            </div> 
+        </div> 
     </nav>
 
     <section id="hero">
         <div class="container">
             <h2>Amazon Prime Air: The Drone Revolution</h2>
-            <p>Transforming e-commerce with autonomous aerial delivery</p>
+            <div class="author-info">
+                <div class="author-image">
+                    <img src="IMG_5635.JPG" alt="Author" class="profile-image">
+                </div>
+                <div class="author-name">
+                    <span>Acuna, Andrea</span>
+                </div>
+            </div>
+            <div class="back-button">
+                <a href="company.html" class="btn-back"><i class="fas fa-building"></i>Back to Company</a>
+            </div>
         </div>
     </section>
+    <div class="page-navigation">
+        <a href="#" class="nav-button prev">
+            <div class="circle">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="text">Previous Topic</div>
+        </a>
+        
+        <a href="#" class="nav-button next">
+            <div class="circle">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="text">Next Topic</div>
+        </a>
+    </div>
 
     <main>
         <section id="what" class="product-section">
@@ -62,7 +86,7 @@
                     </div>
                     <div class="image-content">
                         <img src="amazon-mk30.webp" alt="Amazon Prime Air Drone">
-                        <p class="caption">Amazon's Prime Air delivery drone - The standard delivery configuration</p>
+                        <p class="caption"><a href="https://www.theverge.com/2022/11/10/23451851/amazon-mk30-drone-prime-air-delivery" target="newPage">Amazon's Prime Air delivery drone - The standard delivery configuration</a></p>
                     </div>
                 </div>
             </div>
@@ -74,7 +98,7 @@
                 <div class="content-wrapper">
                     <div class="image-content">
                         <img src="amazon-prime-air-process.png" alt="How Prime Air Drone Works">
-                        <p class="caption">How Prime Air drone operates</p>
+                        <p class="caption"><a href="https://medium.com/iet-vit/drones-and-bots-the-future-of-delivery-298f35c8f6ce" target="newPage">How Prime Air drone operates</a></p>
                     </div>
                     <div class="text-content">
                         <p>Amazon Prime Air operates through a sophisticated autonomous system that enables it to:</p>
@@ -113,11 +137,27 @@
                     </div>
                     <div class="image-content">
                         <img src="prime-air-2019-unveil.webp" alt="Prime Air Unveil">
-                        <p class="caption">Amazon revealed a new drone at its Re:Mars conference in 2019</p>
+                        <p class="caption"><a href="https://www.aboutamazon.com/news/transportation/a-drone-program-taking-flight" target="newPage">Amazon revealed a new drone at its Re:Mars conference in 2019</a></p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <div class="page-navigation">
+            <a href="#" class="nav-button prev">
+                <div class="circle">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="text">Previous Topic</div>
+            </a>
+        
+            <a href="#" class="nav-button next">
+                <div class="circle">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="text">Next Topic</div>
+            </a>
+        </div>
 
         <section id="where" class="product-section alt-bg">
             <div class="container">
@@ -125,7 +165,7 @@
                 <div class="content-wrapper">
                     <div class="image-content">
                         <img src="prime-air-college-station.avif" alt="Prime Air in use">
-                        <p class="caption">Amazon Prime Air took flight in College Station in December 2022</p>
+                        <p class="caption"><a href="https://www.kbtx.com/2024/02/23/amazon-gives-drone-delivery-presentation-residents-split-response/" target="newPage">Amazon Prime Air took flight in College Station in December 2022</a></p>
                     </div>
                     <div class="text-content">
                         <p>Amazon Prime Air has been implemented in select locations as part of its phased rollout strategy:</p>
@@ -159,16 +199,9 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <img src="trendy.png" alt="Trendy Logo" class="footer-logo">
-                    <span>TRENDY INFO</span>
                     <p class="footer-description">Exploring the future through industry innovation.</p>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
                 </div>
-
+                
                 <div class="footer-links">
                     <div class="link-group">
                         <h4><i class="fas fa-industry"></i> Industries</h4>
@@ -176,36 +209,27 @@
                             <li><a href="health.html"><i class="fas fa-heartbeat"></i> Health Tech</a></li>
                             <li><a href="security.html"><i class="fas fa-shield-alt"></i> Cybersecurity</a></li>
                             <li><a href="transportation.html"><i class="fas fa-car"></i> Transportation</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group-2">
+                        <ul>
                             <li><a href="communication.html"><i class="fas fa-comments"></i> Communication</a></li>
                             <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
                             <li><a href="entertainment.html"><i class="fas fa-film"></i> Entertainment</a></li>
                         </ul>
                     </div>
-
-                    <div class="link-group">
-                        <h4><i class="fas fa-book"></i> Resources</h4>
-                        <ul>
-                            <li><a href="#"><i class="fas fa-file-alt"></i> Reports</a></li>
-                            <li><a href="#"><i class="fas fa-chart-line"></i> Market Data</a></li>
-                            <li><a href="#"><i class="fas fa-blog"></i> Blog</a></li>
-                            <li><a href="#"><i class="fas fa-newspaper"></i> News</a></li>
-                            <li><a href="#"><i class="fas fa-book-open"></i> Guides</a></li>
-                        </ul>
-                    </div>
-
+                    
                     <div class="link-group">
                         <h4><i class="fas fa-building"></i> Company</h4>
                         <ul>
                             <li><a href="about.html"><i class="fas fa-users"></i> About</a></li>
                             <li><a href="#"><i class="fas fa-briefcase"></i> Careers</a></li>
-                            <li><a href="#"><i class="fas fa-handshake"></i> Partners</a></li>
                             <li><a href="#feedback"><i class="fas fa-envelope"></i> Contact</a></li>
-                            <li><a href="#"><i class="fas fa-question-circle"></i> FAQ</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-
+            
             <div class="footer-bottom">
                 <div class="copyright">
                     © 2025 Trendy Info. All rights reserved.
@@ -217,7 +241,7 @@
                 </div>
             </div>
         </div>
-    </footer>    
+    </footer> 
 </body>
 <script src="js/bootstrap.js"></script>
 </html>
