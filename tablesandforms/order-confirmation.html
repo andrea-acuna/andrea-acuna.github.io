@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - Crunch & Quench</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+            background-color: #f8f7f4;
+            color: #333;
+            position: relative;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            position: relative;
+            z-index: 1;
+            background-color: white;
+            border: 3px solid #560000;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto 20px;
+            max-width: 150px;
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 2.5em;
+            color: #560000;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-family: "Playfair Display", serif;
+            color: #560000;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-align: left;
+            font-size: 1.5em;
+            font-weight: 600;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 8px;
+        }
+
+        p {
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .confirmation-icon {
+            font-size: 80px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .order-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #560000;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #fff9e6;
+            border: 2px dashed #FFD700;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .details-container {
+            margin: 30px 0;
+            text-align: left;
+            padding: 0px 20px 20px 20px;
+            background-color: #fafafa;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .detail-item {
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .detail-label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .order-items {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .order-item {
+            background-color: #fff;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        .order-item-title {
+            font-weight: bold;
+            color: #560000;
+            margin-bottom: 5px;
+        }
+
+        .order-item-details {
+            color: #333;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: #560000;
+            color: #FFD700;
+            text-decoration: none;
+            border-radius: 4px;
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #FFD700;
+            color: #560000;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                width: 95%;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .confirmation-icon {
+                font-size: 60px;
+            }
+            
+            .detail-item {
+                flex-direction: column;
+                margin-bottom: 15px;
+            }
+            
+            .detail-label {
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="crunch-and-quench-logo.png" alt="Crunch & Quench Logo" class="logo">
+        <h1>Order Confirmed!</h1>
+        <p>Thank you for your order. We've received your request and are preparing your delicious meal with care.</p>
+        
+        <div class="order-number">
+            Order #: <span id="orderNumberDisplay">CQ-2025042101</span>
+        </div>
+        
+        <div class="details-container">
+            <h2>Customer Information</h2>
+            <div class="detail-item">
+                <span class="detail-label">Name:</span>
+                <span id="customerName">-</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Contact Number:</span>
+                <span id="customerPhone">-</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Address:</span>
+                <span id="customerAddress">-</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Delivery Method:</span>
+                <span id="deliveryMethodDisplay">-</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Order Date:</span>
+                <span id="orderDateDisplay">-</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Requested Delivery/Pickup:</span>
+                <span id="requestedDateTime">-</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Expected Time:</span>
+                <span id="deliveryTimeDisplay">30-45 minutes</span>
+            </div>
+            
+            <h2>Order Summary</h2>
+            <div id="orderItems" class="order-items">
+                <!-- Order items will be populated here -->
+            </div>
+        </div>
+        
+        <a href="order-form.html" class="btn">Return to Order Form</a>
+    </div>
+
+    <script>
+        // Generate a random order number
+        function generateOrderNumber() {
+            const date = new Date();
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+            return `CQ-${year}${month}${day}${random}`;
+        }
+        
+        // Format date for display
+        function formatDate(dateString) {
+            if (!dateString) return "-";
+            
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            };
+            
+            try {
+                const date = new Date(dateString);
+                return date.toLocaleDateString('en-US', options);
+            } catch (e) {
+                return dateString;
+            }
+        }
+        
+        // Display current date
+        function setCurrentDate() {
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            };
+            const date = new Date();
+            document.getElementById('orderDateDisplay').textContent = date.toLocaleDateString('en-US', options);
+        }
+        
+        // Get form data from URL parameters
+        function getFormData() {
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            // Set customer information
+            document.getElementById('customerName').textContent = urlParams.get('fullname') || '-';
+            document.getElementById('customerPhone').textContent = urlParams.get('contact') || '-';
+            document.getElementById('customerAddress').textContent = urlParams.get('address') || '-';
+            
+            // Set delivery method
+            const deliveryOption = urlParams.get('deliveryOption');
+            document.getElementById('deliveryMethodDisplay').textContent = 
+                deliveryOption === 'pickup' ? 'Pick-up' : 'Delivery';
+            
+            // Set requested date/time
+            document.getElementById('requestedDateTime').textContent = 
+                formatDate(urlParams.get('orderDateTime')) || '-';
+            
+            // Set order number
+            document.getElementById('orderNumberDisplay').textContent = generateOrderNumber();
+            
+            // Process order items
+            const orderItemsContainer = document.getElementById('orderItems');
+            
+            // Process burger items
+            const burgerQuantity = parseInt(urlParams.get('burgerQuantity')) || 0;
+            if (burgerQuantity > 0) {
+                const burgerPatty = urlParams.get('patty') || 'single';
+                const bunType = urlParams.get('bunType') || 'white';
+                
+                // Get toppings (may be multiple values)
+                const toppings = urlParams.getAll('burgerToppings');
+                
+                const burgerItem = document.createElement('div');
+                burgerItem.className = 'order-item';
+                
+                burgerItem.innerHTML = `
+                    <div class="order-item-title">🍔 Custom Burger (${burgerQuantity})</div>
+                    <div class="order-item-details">
+                        <div><strong>Patty:</strong> ${burgerPatty === 'double' ? 'Double' : 'Single'} Patty</div>
+                        <div><strong>Bun Type:</strong> ${bunType.charAt(0).toUpperCase() + bunType.slice(1)} Bun</div>
+                        ${toppings.length > 0 ? `<div><strong>Toppings:</strong> ${toppings.map(topping => topping.charAt(0).toUpperCase() + topping.slice(1)).join(', ')}</div>` : '<div>No Extra Toppings</div>'}
+                    </div>
+                `;
+                
+                orderItemsContainer.appendChild(burgerItem);
+            }
+            
+            // Process pasta items
+            const pastaQuantity = parseInt(urlParams.get('pastaQuantity')) || 0;
+            if (pastaQuantity > 0) {
+                const pastaType = urlParams.get('pastaType') || 'carbonara';
+                const pastaAddons = urlParams.getAll('pastaAddons');
+                
+                const pastaItem = document.createElement('div');
+                pastaItem.className = 'order-item';
+                
+                pastaItem.innerHTML = `
+                    <div class="order-item-title">🍝 Custom Pasta Box (${pastaQuantity})</div>
+                    <div class="order-item-details">
+                        <div><strong>Sauce:</strong> ${pastaType.charAt(0).toUpperCase() + pastaType.slice(1)}</div>
+                        ${pastaAddons.length > 0 ? `<div><strong>Add-ons:</strong> ${pastaAddons.map(addon => addon.charAt(0).toUpperCase() + addon.slice(1)).join(', ')}</div>` : '<div>No Add-ons</div>'}
+                    </div>
+                `;
+                
+                orderItemsContainer.appendChild(pastaItem);
+            }
+            
+            // Process fries items
+            const friesQuantity = parseInt(urlParams.get('friesQuantity')) || 0;
+            if (friesQuantity > 0) {
+                const friesSize = urlParams.get('friesSize') || 'small';
+                const friesFlavor = urlParams.get('friesFlavor') || 'plain';
+                
+                const friesItem = document.createElement('div');
+                friesItem.className = 'order-item';
+                
+                friesItem.innerHTML = `
+                    <div class="order-item-title">🍟 Signature Fries (${friesQuantity})</div>
+                    <div class="order-item-details">
+                        <div><strong>Size:</strong> ${friesSize.charAt(0).toUpperCase() + friesSize.slice(1)}</div>
+                        <div><strong>Flavor:</strong> ${friesFlavor.charAt(0).toUpperCase() + friesFlavor.slice(1)}</div>
+                    </div>
+                `;
+                
+                orderItemsContainer.appendChild(friesItem);
+            }
+            
+            // Process drinks items
+            const drinkQuantity = parseInt(urlParams.get('drinkQuantity')) || 0;
+            if (drinkQuantity > 0) {
+                const drinkType = urlParams.get('drinkType') || 'soda';
+                const drinkSize = urlParams.get('drinkSize') || 'small';
+                
+                const drinkItem = document.createElement('div');
+                drinkItem.className = 'order-item';
+                
+                drinkItem.innerHTML = `
+                    <div class="order-item-title">🍹 Beverage (${drinkQuantity})</div>
+                    <div class="order-item-details">
+                        <div><strong>Type:</strong> ${drinkType.charAt(0).toUpperCase() + drinkType.slice(1)}</div>
+                        <div><strong>Size:</strong> ${drinkSize.charAt(0).toUpperCase() + drinkSize.slice(1)}</div>
+                    </div>
+                `;
+                
+                orderItemsContainer.appendChild(drinkItem);
+            }
+            
+            // If no items were added, show a message
+            if (orderItemsContainer.children.length === 0) {
+                const noItemsMessage = document.createElement('p');
+                noItemsMessage.textContent = 'No Items Were Selected.';
+                orderItemsContainer.appendChild(noItemsMessage);
+            }
+        }
+        
+        // Initialize when page loads
+        window.onload = function() {
+            setCurrentDate();
+            getFormData();
+        };
+    </script>
+</body>
+</html>

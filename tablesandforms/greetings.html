@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Submission</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+            background-color: #f8f7f4;
+            color: #333;
+        }
+
+        .greeting-container {
+            width: 60%;
+            max-width: 800px;
+            padding: 30px;
+            background-color: white;
+            border: 3px solid #2c3e50;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+        
+        .greeting-message {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        
+        .user-info {
+            border: 1px solid #c8a97e;
+            padding: 20px;
+            background-color: #f9f6f0;
+        }
+        
+        .user-info h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #c8a97e;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .info-item {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            width: 40%;
+            color: #2c3e50;
+        }
+        
+        .info-value {
+            width: 60%;
+        }
+        
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .return-button {
+            background-color: #2c3e50;
+            color: #c8a97e;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .return-button:hover {
+            background-color: #c8a97e;
+            color: #2c3e50;
+        }
+
+        /* Style for empty values */
+        .empty-value {
+            color: #999;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="greeting-container">
+        <div class="greeting-message">
+            <h2>Hello, <span id="userFirstName">there</span>!</h2>
+            <p>Thank you for submitting your information. We have received your details successfully.</p>
+        </div>
+        
+        <div class="user-info">
+            <h3>Your Submitted Information:</h3>
+            
+            <div class="info-item">
+                <div class="info-label">Name:</div>
+                <div class="info-value" id="displayName">-</div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-label">Gender:</div>
+                <div class="info-value" id="displayGender">-</div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-label">Eye Color:</div>
+                <div class="info-value" id="displayEyeColor">-</div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-label">Physical Features:</div>
+                <div class="info-value" id="displayFeatures">-</div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-label">Athletic Ability:</div>
+                <div class="info-value" id="displayAbility">-</div>
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <a href="javascript:history.back()" class="return-button">Return to Form</a>
+        </div>
+    </div>
+
+    <script>
+        // Function to get URL parameters
+        function getUrlParams() {
+            let params = {};
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            
+            for (const [key, value] of urlParams) {
+                params[key] = value;
+            }
+            
+            return params;
+        }
+        
+        // Function to get first name from full name
+        function getFirstName(fullName) {
+            if (!fullName) return "there";
+            // Split the name by spaces and return the first part
+            return fullName.split(' ')[0];
+        }
+        
+        // Function to display the form data
+        function displayFormData() {
+            const params = getUrlParams();
+            
+            // Display name
+            if (params.name) {
+                // Get first name for greeting
+                const firstName = getFirstName(params.name);
+                document.getElementById('userFirstName').textContent = firstName;
+                
+                // Display full name in the details section
+                document.getElementById('displayName').textContent = params.name;
+            } else {
+                document.getElementById('displayName').innerHTML = '<span class="empty-value">Not provided</span>';
+            }
+            
+            // Display gender
+            if (params.gender) {
+                document.getElementById('displayGender').textContent = params.gender.charAt(0).toUpperCase() + params.gender.slice(1);
+            } else {
+                document.getElementById('displayGender').innerHTML = '<span class="empty-value">Not provided</span>';
+            }
+            
+            // Display eye color
+            if (params.eyeColor) {
+                document.getElementById('displayEyeColor').textContent = 
+                    params.eyeColor.charAt(0).toUpperCase() + params.eyeColor.slice(1);
+            } else {
+                document.getElementById('displayEyeColor').innerHTML = '<span class="empty-value">Not provided</span>';
+            }
+            
+            // Display features (checkboxes)
+            let features = [];
+            if (params.feature1) features.push(params.feature1);
+            if (params.feature2) features.push(params.feature2);
+            if (params.feature3) features.push(params.feature3);
+            
+            if (features.length > 0) {
+                document.getElementById('displayFeatures').textContent = features.join(", ");
+            } else {
+                document.getElementById('displayFeatures').innerHTML = '<span class="empty-value">None selected</span>';
+            }
+            
+            // Display athletic ability
+            if (params.ability) {
+                document.getElementById('displayAbility').textContent = params.ability;
+            } else {
+                document.getElementById('displayAbility').innerHTML = '<span class="empty-value">Not provided</span>';
+            }
+        }
+        
+        // Run when page loads
+        window.onload = displayFormData;
+    </script>
+</body>
+</html>
