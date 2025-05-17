@@ -13,37 +13,61 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <nav class="top-nav">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="home.html"><img src="logo.png" alt="Trendy Logo" class="logo"></a>
-                <span>TRENDY INFO</span>
-            </div>
-            <div class="nav-links">
-                <a href="#" class="nav-link"><i class="fas fa-home"></i> Home</a>
-                <div class="dropdown-menu">
-                    <a href="#categories"><i class="fas fa-th-large"></i> Categories <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="communication.html"><i class="fas fa-comments"></i> Communication</a>
-                        <a href="security.html"><i class="fas fa-shield-alt"></i> Security</a>
-                        <a href="health.html"><i class="fas fa-heartbeat"></i> Health</a>
-                        <a href="entertainment.html"><i class="fas fa-film"></i> Entertainment</a>
-                        <a href="transportation.html"><i class="fas fa-car"></i> Transportation</a>
-                        <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+    <nav class="top-nav"> 
+        <div class="container"> 
+            <div class="nav-brand"> 
+                <a href="home.html"><img src="logo.png" alt="Trendy Logo" class="logo"></a> 
+                <span>TRENDY</span> 
+            </div> 
+            <div class="nav-links"> 
+                <a href="aboutus.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a> 
+                <div class="dropdown-menu"> 
+                    <a href="#categories"><i class="fas fa-th-large"></i> Categories <i class="fas fa-chevron-down"></i></a> 
+                    <div class="dropdown-content"> 
+                        <a href="communication.html"><i class="fas fa-comments"></i> Communication</a> 
+                        <a href="security.html"><i class="fas fa-shield-alt"></i> Security</a> 
+                        <a href="health.html"><i class="fas fa-heartbeat"></i> Health</a> 
+                        <a href="entertainment.html"><i class="fas fa-film"></i> Entertainment</a> 
+                        <a href="transportation.html"><i class="fas fa-car"></i> Transportation</a> 
+                        <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a> 
                     </div>
-                </div>
-                <a href="aboutus.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a>
+                </div> 
                 <a href="#feedback" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
-            </div>
-        </div>
+            </div> 
+        </div> 
     </nav>
 
     <section id="hero">
         <div class="container">
             <h2>Aurora: Self-Driving Trucks</h2>
-            <p>Revolutionizing the future of freight transportation</p>
+            <div class="author-info">
+                <div class="author-image">
+                    <img src="IMG_5635.JPG" alt="Author" class="profile-image">
+                </div>
+                <div class="author-name">
+                    <span>Acuña, Andrea</span>
+                </div>
+            </div>
+            <div class="back-button">
+                <a href="company.html" class="btn-back"><i class="fas fa-building"></i>Back to Company</a>
+            </div>
         </div>
     </section>
+    <div class="page-navigation">
+        <a href="#" class="nav-button prev">
+            <div class="circle">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="text">Previous Topic</div>
+        </a>
+        
+        <a href="#" class="nav-button next">
+            <div class="circle">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="text">Next Topic</div>
+        </a>
+    </div>
 
     <main>
         <section id="what" class="product-section">
@@ -62,7 +86,7 @@
                     </div>
                     <div class="image-content">
                         <img src="aurora-truck.jpg" alt="Aurora Self-Driving Truck">
-                        <p class="caption">Aurora's autonomous truck equipped with the Aurora Driver system</p>
+                        <p class="caption"><a href="https://aurora.tech/" target="newPage">Aurora's autonomous truck equipped with the Aurora Driver system</a></p>
                     </div>
                 </div>
             </div>
@@ -74,7 +98,7 @@
                 <div class="content-wrapper">
                     <div class="image-content">
                         <img src="aurora-autonomous-tech.png" alt="Aurora Technology System">
-                        <p class="caption">Aurora Driver uses a mix of sensors working together to get a full view of its surroundings</p>
+                        <p class="caption"><a href="https://aurora.tech/freight" target="newPage">Aurora Driver uses a mix of sensors working together to get a full view of its surroundings</a></p>
                     </div>
                     <div class="text-content">
                         <p>Aurora's self-driving truck technology operates through a sophisticated autonomous system that enables it to:</p>
@@ -113,7 +137,7 @@
                     </div>
                     <div class="image-content">
                         <img src="aurora-founders.jpg" alt="Aurora Founders">
-                        <p class="caption">Aurora's founders</p>
+                        <p class="caption"><a href="https://aurora.tech/company" target="newPage">The founders of Aurora</a></p>
                     </div>
                 </div>
             </div>
@@ -124,8 +148,8 @@
                 <h2>Where Is It Already Implemented?</h2>
                 <div class="content-wrapper">
                     <div class="image-content">
-                        <img src="aurora-driver.jpg" alt="Aurora Operational Routes">
-                        <p class="caption">Aurora’s self-driving trucks hit the road in Texas</p>
+                        <img src="aurora-driver.jpg" alt="Aurora in Texas">
+                        <p class="caption"><a href="https://ir.aurora.tech/news-events/press-releases/detail/119/aurora-begins-commercial-driverless-trucking-in-texas" target="newPage">Aurora’s self-driving trucks hit the road in Texas</a></p>
                     </div>
                     <div class="text-content">
                         <p>Aurora has been implementing its self-driving truck technology in strategic locations to demonstrate and refine its capabilities:</p>
@@ -159,14 +183,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <img src="trendy.png" alt="Trendy Logo" class="footer-logo">
-                    <span>TRENDY INFO</span>
                     <p class="footer-description">Exploring the future through industry innovation.</p>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
                 </div>
                 
                 <div class="footer-links">
@@ -176,20 +193,13 @@
                             <li><a href="health.html"><i class="fas fa-heartbeat"></i> Health Tech</a></li>
                             <li><a href="security.html"><i class="fas fa-shield-alt"></i> Cybersecurity</a></li>
                             <li><a href="transportation.html"><i class="fas fa-car"></i> Transportation</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group-2">
+                        <ul>
                             <li><a href="communication.html"><i class="fas fa-comments"></i> Communication</a></li>
                             <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
                             <li><a href="entertainment.html"><i class="fas fa-film"></i> Entertainment</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="link-group">
-                        <h4><i class="fas fa-book"></i> Resources</h4>
-                        <ul>
-                            <li><a href="#"><i class="fas fa-file-alt"></i> Reports</a></li>
-                            <li><a href="#"><i class="fas fa-chart-line"></i> Market Data</a></li>
-                            <li><a href="#"><i class="fas fa-blog"></i> Blog</a></li>
-                            <li><a href="#"><i class="fas fa-newspaper"></i> News</a></li>
-                            <li><a href="#"><i class="fas fa-book-open"></i> Guides</a></li>
                         </ul>
                     </div>
                     
@@ -198,9 +208,7 @@
                         <ul>
                             <li><a href="about.html"><i class="fas fa-users"></i> About</a></li>
                             <li><a href="#"><i class="fas fa-briefcase"></i> Careers</a></li>
-                            <li><a href="#"><i class="fas fa-handshake"></i> Partners</a></li>
                             <li><a href="#feedback"><i class="fas fa-envelope"></i> Contact</a></li>
-                            <li><a href="#"><i class="fas fa-question-circle"></i> FAQ</a></li>
                         </ul>
                     </div>
                 </div>
