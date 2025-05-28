@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Images and Tables</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .img-fixed {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .img-float {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .img-responsive {
+            max-width: 600px;
+            height: 300px;
+            object-fit: cover;
+        }
+        .img-figure {
+            max-width: 500px;
+            height: 300px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-center my-5">
+            <h1 class="display-2">Bootstrap Images and Tables</h1>
+        </div>
+
+        <!-- Task 1: Image Styles -->
+        <div class="mt-5 p-4 bg-light text-dark rounded">
+            <h1 class="display-3">Task 1</h1>
+            <h2>Image Styles</h2>
+            
+            <div class="row">
+                <div class="col-md-4 text-center mb-3">
+                    <img src="https://images.unsplash.com/photo-1617107374365-442a6876ed0a?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Rounded image example" class="rounded img-fixed">
+                    <p class="mt-2">.rounded</p>
+                </div>
+                <div class="col-md-4 text-center mb-3">
+                    <img src="https://images.unsplash.com/photo-1588097257570-59b6f7360bfb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Circular image example" class="rounded-circle img-fixed">
+                    <p class="mt-2">.rounded-circle</p>
+                </div>
+                <div class="col-md-4 text-center mb-3">
+                    <img src="https://images.unsplash.com/photo-1591563665050-fb73da5df10e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Thumbnail image example" class="img-thumbnail img-fixed">
+                    <p class="mt-2">.img-thumbnail</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Task 2: Image Alignment -->
+        <div class="mt-5 p-4 bg-primary text-white rounded">
+            <h1 class="display-3">Task 2</h1>
+            <h2>Image Alignment</h2>
+            
+            <div class="clearfix">
+                <figure class="float-start me-3">
+                    <img src="https://images.unsplash.com/photo-1571149828506-c48f1610314b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Left floating image" class="rounded img-float">
+                    <figcaption class="text-center mt-2">Float Start</figcaption>
+                </figure>
+                
+                <figure class="float-end ms-3">
+                    <img src="https://images.unsplash.com/photo-1571149828803-875424df2aa9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Right floating image" class="rounded img-float">
+                    <figcaption class="text-center mt-2">Float End</figcaption>
+                </figure>
+                
+                <p>This text flows around the floating images. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+        </div>
+
+        <!-- Task 3: Responsive Centered Image -->
+        <div class="mt-5 p-4 bg-warning text-dark rounded">
+            <h1 class="display-3">Task 3</h1>
+            <h2>Responsive Centered Image</h2>
+            
+            <img src="https://images.unsplash.com/photo-1526344966-89049886b28d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Responsive centered landscape image" class="img-fluid mx-auto d-block rounded img-responsive">
+            <p class="text-center mt-3 fw-bold">This image is centered and responsive with proper scaling</p>
+        </div>
+
+        <!-- Task 4: Bootstrap Figure -->
+        <div class="mt-5 p-4 bg-success text-white rounded">
+            <h1 class="display-3">Task 4</h1>
+            <h2>Bootstrap Figure</h2>
+            
+            <figure class="figure">
+                <img src="https://plus.unsplash.com/premium_photo-1673716789500-5b2c0419c0f2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nature landscape for figure example" class="figure-img img-fluid rounded img-figure">
+                <figcaption class="figure-caption text-white text-end">This is a figure caption</figcaption>
+            </figure>
+        </div>
+
+        <!-- Task 5: Basic Bootstrap Table -->
+        <div class="mt-5 p-4 bg-danger text-white rounded">
+            <h1 class="display-3">Task 5</h1>
+            <h2>Basic Bootstrap Table</h2>
+            
+            <table class="table table-danger">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Smith</td>
+                        <td>Software Engineer</td>
+                        <td>Development</td>
+                    </tr>
+                    <tr>
+                        <td>Sarah Johnson</td>
+                        <td>Project Manager</td>
+                        <td>Operations</td>
+                    </tr>
+                    <tr>
+                        <td>Mike Davis</td>
+                        <td>UX Designer</td>
+                        <td>Design</td>
+                    </tr>
+                    <tr>
+                        <td>Emily Brown</td>
+                        <td>Data Analyst</td>
+                        <td>Analytics</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Task 6: Table Styling Variants -->
+        <div class="mt-5 p-4 bg-secondary text-white rounded">
+            <h1 class="display-3">Task 6</h1>
+            <h2>Table Styling Variants</h2>
+            
+            <table class="table table-striped table-hover table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-active">
+                        <td>Apple</td>
+                        <td>₱169</td>
+                        <td>50</td>
+                    </tr>
+                    <tr class="table-success">
+                        <td>Banana</td>
+                        <td>₱158</td>
+                        <td>30</td>
+                    </tr>
+                    <tr class="table-warning">
+                        <td>Orange</td>
+                        <td>₱130</td>
+                        <td>20</td>
+                    </tr>
+                    <tr class="table-danger">
+                        <td>Grape</td>
+                        <td>₱220</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Task 7: Responsive Table with Caption -->
+        <div class="mt-5 mb-5 p-4 bg-dark text-white rounded">
+            <h1 class="display-3">Task 7</h1>
+            <h2>Responsive Table with Caption</h2>
+            
+            <div class="table-responsive">
+                <table class="table table-sm table-striped-columns table-light">
+                    <caption>Student Information</caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Subject</th>
+                            <th>Grade</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alice</td>
+                            <td>Math</td>
+                            <td>A</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>Bob</td>
+                            <td>Science</td>
+                            <td>B</td>
+                            <td>Pass</td>
+                        </tr>
+                        <tr>
+                            <td>Carol</td>
+                            <td>History</td>
+                            <td>C</td>
+                            <td>Pass</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
